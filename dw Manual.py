@@ -13,5 +13,4 @@ fw=open(filename,"wb")
 for bs in file:
     x+=len(bs)
     print('\r' + 'Downloading...: %s [%s%s]%.2f%% ' % (filename,'█' * int(x*Sizebar/size), '░'*(Sizebar-int(x*Sizebar/size)), float(x/size*100)), str(x)+' Bytes',end='')
-
     fw.write(bs)
