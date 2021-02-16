@@ -8,9 +8,7 @@ file=requests.get(url,stream=True)
 size=int(filez.headers['Content-Length'])
  
 
-bar=progressbar.ProgressBar(maxval=size, widgets=["Descarcando... ",
-progressbar.Percentage(),progressbar.Bar('█', '[',']'), progressbar.DataSize(), 
-progressbar.FileTransferSpeed()])
+bar=progressbar.ProgressBar(maxval=size, widgets=["Descarcando... ",progressbar.Percentage(),progressbar.Bar('█', '[',']'), progressbar.DataSize(), progressbar.FileTransferSpeed()])
 
 fw=open("file.mp3","wb")
 
